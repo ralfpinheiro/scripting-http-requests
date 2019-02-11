@@ -11,13 +11,13 @@ var requestOptions = {
 
 function getAndPrintHTMLChunks(response) {
   response.on("data", function(chunk) {
-    console.log("[-- CHUNK OF LENGTH " + chunk.length + " --]");
+    // console.log("[-- CHUNK OF LENGTH " + chunk.length + " --]");
     console.log(chunk.toString());
   });
 }
 
-console.log("I'm about to make the request!");
+// console.log("I'm about to make the request!");
 
 https.request(requestOptions, getAndPrintHTMLChunks).end();
 
-console.log("I've made the request!");
+// console.log("I've made the request!");
