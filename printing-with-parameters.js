@@ -17,7 +17,7 @@ function getAndPrintHTML (options) {
 
 
     // marks the end of the file
-    https.request(obj, callback).end();
+    https.request(options, callback).end();
 }
 
 
