@@ -1,4 +1,4 @@
-function getHTML(obj, callback) {
+module.exports = function getHTML(requestOptions, callback) {
   var https = require("https");
   var obj = {};
   obj.host = requestOptions.host;
@@ -16,15 +16,8 @@ function getHTML(obj, callback) {
 
   // marks the end of the file
   https.request(obj, callback).end();
-}
+};
 
 function printHTML(html) {
   console.log(html);
 }
-
-var requestOptions = {
-  host: "sytantris.github.io",
-  path: "/http-examples/step4.html"
-};
-
-getHTML();
